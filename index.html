@@ -3,14 +3,48 @@
   <head>
     <title> Til | Today I Learned</title>
   </head>
+  <style>
+
+    body {
+      margin: 0;
+      padding: 0;
+      height: 85vh;
+      font-family: menlo, monaco, inconsolata, "source code pro", monospace;
+    }
+
+    .content {
+      height: 100%;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      vertical-align: middle;
+    }
+
+    h1 {
+      font-size: 6em;
+      margin: 0;
+      text-align: center;
+      letter-spacing: -.1em;
+      padding-bottom: 20px;
+    }
+
+    .events {
+      text-align: center;
+    }
+
+  </style>
   <body>
-    <h1>TIL</h1>
-    <p>
-      <b> Next Event </b> : Introduction to Bitcoin
-      <br/>
-      Soul Brew, Vasna Road, Vadodara
-      <br/>
-      19th November 2017
-    </p>
+    <div class="content">
+      <h1 class="header">TIL</h1>
+      <div class="events">
+        Next Event: Introduction to Bitcoin
+        <br/>
+        Soul Brew, Vasna Road, Vadodara
+        <br/>
+        19th November 2017
+      </div>
+    </div>
   </body>
 </html>
