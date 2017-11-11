@@ -3,6 +3,9 @@
   <head>
     <title> Til | Today I Learned</title>
   </head>
+
+  <link href="https://fonts.googleapis.com/css?family=Lato|Merriweather|Montserrat|Roboto|Titillium+Web|Ubuntu" rel="stylesheet">
+
   <style>
 
     body {
@@ -22,20 +25,25 @@
       vertical-align: middle;
     }
 
-    h1 {
+    .header {
       font-size: 6em;
       margin: 0;
       text-align: center;
-      letter-spacing: -.1em;
       padding-bottom: 20px;
+    }
+
+    .header:hover {
+      cursor: pointer;
     }
 
     .events {
       text-align: center;
+      font-family: menlo, monaco, inconsolata, "source code pro", monospace;
     }
 
   </style>
   <body>
+
     <div class="content">
       <h1 class="header">TIL</h1>
       <div class="events">
@@ -46,5 +54,34 @@
         19th November 2017
       </div>
     </div>
+    <script>
+      var fontsArray = [
+        'Lato',
+        'Merriweather',
+        'Montserrat',
+        'Roboto',
+        'Ubuntu',
+        'menlo',
+        'monaco',
+        'inconsolata',
+        'source code pro',
+        'monospace'
+      ];
+
+      var head = document.querySelector('.header');
+
+      function changeFonts() {
+        var randomFont = fontsArray[Math.floor(Math.random() * fontsArray.length)];
+        head.style.fontFamily = randomFont;
+      }
+
+      head.addEventListener('click', function(){
+        setTimeout(changeFonts, 10);
+      });
+
+      document.fonts.ready.then(function() {
+        setTimeout(changeFonts, 10);
+      });
+    </script>
   </body>
 </html>
