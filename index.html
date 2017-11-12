@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> Til - Today I Learned</title>
+  </head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link href="https://fonts.googleapis.com/css?family=Lato|Merriweather|Montserrat|Roboto|Titillium+Web|Ubuntu" rel="stylesheet">
+
+  <style>
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: menlo, monaco, inconsolata, "source code pro", monospace;
+      background-color: #ecf0f1;
+    }
+
+    .content {
+      height: 85vh;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      vertical-align: middle;
+    }
+
+    .header {
+      font-size: 6em;
+      margin: 0;
+      text-align: center;
+      padding-bottom: 20px;
+    }
+
+    .header:hover {
+      cursor: pointer;
+    }
+
+    .events {
+      text-align: center;
+      font-family: menlo, monaco, inconsolata, "source code pro", monospace;
+    }
+
+    .links {
+      color: #3498db;
+    }
+
+  </style>
+  <body>
+
+    <div class="content">
+      <h1 class="header">TIL</h1>
+      <div class="events">
+        Next Event: Introduction to Bitcoin
+        <br/>
+        <a class="links" href="https://www.google.co.in/maps/place/Soul+Brew+Coffee,+Vasna+Road/@22.3071866,73.1620658,15z/data=!4m8!1m2!2m1!1ssoul+brew+vasna!3m4!1s0x395fc61fe9000007:0x3f10af9119949d42!8m2!3d22.2954162!4d73.1593698" target="_blank"> Soul Brew, Vasna Road, Vadodara </a>
+        <br/>
+        <a class="links" href="http://www.google.com/calendar/event?action=TEMPLATE&dates=20171119T053000Z%2F20171119T063000Z&text=Introduction%20to%20Bitcoin&location=Soul%20Brew%2C%20Vasna%20Vadodara&details=" target="_blank">19th November 2017</a>
+      </div>
+    </div>
+    <script>
+      var fontsArray = [
+        'Lato',
+        'Merriweather',
+        'Montserrat',
+        'Roboto',
+        'Ubuntu',
+        'menlo',
+        'monaco',
+        'inconsolata',
+        'source code pro',
+        'monospace'
+      ];
+
+      var head = document.querySelector('.header');
+
+      function changeFonts() {
+        var randomFont = fontsArray[Math.floor(Math.random() * fontsArray.length)];
+        head.style.fontFamily = randomFont;
+      }
+
+      head.addEventListener('click', function(){
+        setTimeout(changeFonts, 10);
+      });
+
+      document.fonts.ready.then(function() {
+        setTimeout(changeFonts, 10);
+      });
+    </script>
+  </body>
+</html>
