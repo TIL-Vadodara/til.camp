@@ -4,7 +4,9 @@
   "homepage": "http://til.camp",
   "main": "index.js",
   "scripts": {
+    "clean": "rimraf dist/*",
     "start": "cross-env NODE_ENV=development parcel index.html ",
+    "prebuild": "yarn run clean && cp CNAME 404.html dist/",
     "build": "cross-env NODE_ENV=production parcel build index.html --public-url ./",
     "predeploy": "yarn build",
     "deploy": "gh-pages -d dist"
@@ -22,7 +24,8 @@
     "babel-preset-react": "^6.24.1",
     "cross-env": "^5.1.3",
     "gh-pages": "^1.1.0",
-    "parcel-bundler": "^1.6.2"
+    "parcel-bundler": "^1.6.2",
+    "rimraf": "^2.6.2"
   },
   "dependencies": {
     "autoprefixer": "^8.1.0",
