@@ -1,0 +1,11 @@
+@import "../../constants/colors";
+
+.link {
+  display: inline-block;
+  padding: 5px 18px;
+  border-radius: 4px;
+  font-size: 30px;
+  letter-spacing: 4px;
+  color: transparent;
+  background-color: $brandColor;
+}

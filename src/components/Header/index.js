@@ -1,14 +1,13 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import * as routes from '../../constants/routes'
+import Logo from '../Logo'
 import classNames from './index.scss'
 
 const Header = () => (
   <div className={classNames.header}>
     <div className={classNames.logoSection}>
-      <div className={classNames.navigationItemLogo}>
-        <Link to={routes.HOME}>TIL</Link>
-      </div>
+      <Logo />
     </div>
 
     <div className={classNames.navigation}>
