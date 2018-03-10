@@ -16,7 +16,7 @@ class PastTalks extends Component {
   }
 
   componentDidMount() {
-    const eventsRef = database.ref('events').orderByChild('startTime')
+    const eventsRef = database.ref('events')
 
     eventsRef.on('child_added', data => {
       const promises = []
