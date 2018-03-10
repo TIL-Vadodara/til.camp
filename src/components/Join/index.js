@@ -1,9 +1,6 @@
 import React from 'react'
 import classNames from './index.scss'
 import { InstagramLogo, MeetupLogo, WhatsAppLogo } from '../Icons'
-// import whatsappImage from './whatsapp.svg'
-// import meetupImage from './meetup.svg'
-// import instagramImage from './instagram.svg'
 
 const Join = () => (
   <div>
