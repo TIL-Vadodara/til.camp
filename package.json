@@ -1,0 +1,39 @@
+{
+  "name": "til.camp",
+  "version": "1.0.0",
+  "homepage": "http://til.camp",
+  "main": "index.js",
+  "scripts": {
+    "clean": "rimraf dist/*",
+    "start": "cross-env NODE_ENV=development parcel index.html ",
+    "prebuild": "yarn run clean && cp CNAME 404.html dist/",
+    "build": "cross-env NODE_ENV=production parcel build index.html --public-url ./",
+    "predeploy": "yarn build",
+    "deploy": "gh-pages -d dist"
+  },
+  "repository": "https://github.com/samyakbhuta/til.camp.git",
+  "contributors": [
+    "Lakhan Samani <lakhan.m.samani@gmail.com>",
+    "Nayaabkhan Khan <khannayaab@gmail.com>",
+    "Samyak Bhuta <samyak.bhuta@gmail.com>"
+  ],
+  "license": "MIT",
+  "private": true,
+  "devDependencies": {
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "cross-env": "^5.1.3",
+    "gh-pages": "^1.1.0",
+    "parcel-bundler": "^1.6.2",
+    "rimraf": "^2.6.2"
+  },
+  "dependencies": {
+    "autoprefixer": "^8.1.0",
+    "firebase": "^4.10.1",
+    "node-sass": "^4.7.2",
+    "postcss-modules": "^1.1.0",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-router-dom": "^4.2.2"
+  }
+}

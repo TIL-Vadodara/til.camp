@@ -1,0 +1,5 @@
+export const HOME = '/'
+export const PAST_EVENTS = '/events'
+export const JOIN = '/join'
+export const SUGGEST = '/suggest'
+export const ABOUT = '/about'

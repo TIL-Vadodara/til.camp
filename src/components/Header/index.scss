@@ -1,0 +1,46 @@
+@import "../../constants/colors";
+
+.logoSection {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.navigation {
+  display: flex;
+  justify-content: center;
+}
+
+.navigationItem {
+  flex-basis: content;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+.link {
+  display: block;
+  height: 44px;
+  line-height: 44px;
+  padding: 0 12px;
+}
+
+.linkActive {
+  position: relative;
+  color: $brandColor;
+
+  &::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 5px;
+    height: 4px;
+    width: 4px;
+    transform: translateX(-2px);
+    border-radius: 100%;
+    background-color: $brandColor;
+  }
+}
+
+.logo {
+  border: 2px solid $brandColor;
+  border-radius: 3px;
+}

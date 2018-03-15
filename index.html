@@ -1,95 +1,55 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title> Til - Today I Learned</title>
-  </head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link href="https://fonts.googleapis.com/css?family=Lato|Merriweather|Montserrat|Roboto|Titillium+Web|Ubuntu" rel="stylesheet">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  <style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,600,700|Bangers|Monoton|Playfair+Display:700" rel="stylesheet">
 
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: menlo, monaco, inconsolata, "source code pro", monospace;
-      background-color: #ecf0f1;
-    }
+    <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
+    <link rel="manifest" href="favicons/site.webmanifest">
+    <link rel="mask-icon" href="favicons/safari-pinned-tab.svg" color="#315df7">
+    <link rel="icon" href="favicons/favicon.ico">
+    <meta name="msapplication-TileColor" content="#315df7">
+    <meta name="theme-color" content="#ffffff">
 
-    .content {
-      height: 85vh;
-      position: relative;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      vertical-align: middle;
-      padding: 10px;
-    }
+    <title>TIL - Today I Learned</title>
 
-    .header {
-      font-size: 6em;
-      margin: 0;
-      text-align: center;
-      padding-bottom: 20px;
-    }
-
-    .header:hover {
-      cursor: pointer;
-    }
-
-    .events {
-      text-align: center;
-      font-size: 18px;
-      line-height: 28px;
-      font-family: menlo, monaco, inconsolata, "source code pro", monospace;
-    }
-
-    .links {
-      color: #3498db;
-    }
-
-  </style>
-  <body>
-
-    <div class="content">
-      <h1 class="header">TIL</h1>
-      <div class="events">
-        Next Event: Watch and Talk - <b>Hans Rosling: </b> Facts about Population Growth
-        <br/>
-        <a class="links" href="https://www.google.co.in/maps/place/Soul+Brew+Coffee,+Vasna+Road/@22.3071866,73.1620658,15z/data=!4m8!1m2!2m1!1ssoul+brew+vasna!3m4!1s0x395fc61fe9000007:0x3f10af9119949d42!8m2!3d22.2954162!4d73.1593698" target="_blank"> Soul Brew, Vasna Road, Vadodara </a>
-        <br/>
-        <a class="links" href="http://www.google.com/calendar/event?action=TEMPLATE&dates=20180218T053000Z%2F20180218T063000Z&text=Facts%20about%20Population%20Growth&location=https%3A%2F%2Fwww.google.co.in%2Fmaps%2Fplace%2FSoul%2BBrew%2BCoffee%2C%2BVasna%2BRoad%2F%4022.3071866%2C73.1620658%2C15z%2Fdata%3D!4m8!1m2!2m1!1ssoul%2Bbrew%2Bvasna!3m4!1s0x395fc61fe9000007%3A0x3f10af9119949d42!8m2!3d22.2954162!4d73.1593698&details=TIL%20Watch%20and%20Talk%3A%20In%20this%20watch%20and%20talk%2C%20we%E2%80%99ll%20be%20watching%20and%20discussing%20Hans%20Rosling%E2%80%99s%20popular%20talk%20%E2%80%9CDon%E2%80%99t%20Panic%3A%20The%20Facts%20about%20Population%E2%80%9D%3B%20where%20he%20argues%20why%20the%20world%20population%20won%E2%80%99t%20cross%2011%20billion.%20Hans%20Rosling%20is%20a%20statistician%20and%20an%20excellent%20orator%20who%20uses%20engaging%20visuals%20to%20present%20population%20facts" target="_blank">18th February 2018</a>
-      </div>
-    </div>
-    <script>
-      var fontsArray = [
-        'Lato',
-        'Merriweather',
-        'Montserrat',
-        'Roboto',
-        'Ubuntu',
-        'menlo',
-        'monaco',
-        'inconsolata',
-        'source code pro',
-        'monospace'
-      ];
-
-      var head = document.querySelector('.header');
-
-      function changeFonts() {
-        var randomFont = fontsArray[Math.floor(Math.random() * fontsArray.length)];
-        head.style.fontFamily = randomFont;
-      }
-
-      head.addEventListener('click', function(){
-        setTimeout(changeFonts, 10);
-      });
-
-      document.fonts.ready.then(function() {
-        setTimeout(changeFonts, 10);
-      });
+    <script type="text/javascript">
+      // Single Page Apps for GitHub Pages
+      // https://github.com/rafrex/spa-github-pages
+      // Copyright (c) 2016 Rafael Pedicini, licensed under the MIT License
+      // ----------------------------------------------------------------------
+      // This script checks to see if a redirect is present in the query string
+      // and converts it back into the correct url and adds it to the
+      // browser's history using window.history.replaceState(...),
+      // which won't cause the browser to attempt to load the new url.
+      // When the single page app is loaded further down in this file,
+      // the correct url will be waiting in the browser's history for
+      // the single page app to route accordingly.
+      (function(l) {
+        if (l.search) {
+          var q = {};
+          l.search.slice(1).split('&').forEach(function(v) {
+            var a = v.split('=');
+            q[a[0]] = a.slice(1).join('=').replace(/~and~/g, '&');
+          });
+          if (q.p !== undefined) {
+            window.history.replaceState(null, null,
+              l.pathname.slice(0, -1) + (q.p || '') +
+              (q.q ? ('?' + q.q) : '') +
+              l.hash
+            );
+          }
+        }
+      }(window.location))
     </script>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script src="index.js"></script>
   </body>
 </html>
