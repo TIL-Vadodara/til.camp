@@ -10,9 +10,6 @@ const Join = () => (
       <a className={classNames.link} href="https://www.meetup.com/TIL-Today-I-Learn/" target="_blank">
         <MeetupLogo alt="meetup" />
       </a>
-      <a className={classNames.link} href="https://chat.whatsapp.com/5QjZq084FmHDXsrRfXKAj1" target="_blank">
-        <WhatsAppLogo alt="whatsapp" />
-      </a>
       <a className={classNames.link} href="https://www.instagram.com/til.camp/" target="_blank">
         <InstagramLogo alt="instagram" />
       </a>
