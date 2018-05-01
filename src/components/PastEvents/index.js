@@ -3,6 +3,10 @@ import { database } from '../../services/firebase'
 import classNames from './index.scss'
 import { Pin, WatchAndTalk } from '../Icons'
 
+const sortEvents = (events) => (
+  events.sort((a, b) => a.startTime - b.startTime)
+)
+
 class PastTalks extends Component {
   constructor(props) {
     super(props)
@@ -52,7 +56,7 @@ class PastTalks extends Component {
         snapshots.forEach((snapshot, index) => thens[index](snapshot))
         this.setState(prevState => ({
           isLoading: false,
-          pastEvents: prevState.pastEvents.concat(newEvent),
+          pastEvents: sortEvents(prevState.pastEvents.concat(newEvent)),
         }))
       })
     })
