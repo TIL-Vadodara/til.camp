@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import App from './src/components/App'
+import App from './App'
 
-const mountNode = document.getElementById('app')
+const mountNode = document.getElementById('root')
 ReactDOM.render(<App />, mountNode)
