@@ -8,21 +8,21 @@ const typefacesStyles = [
     fontFamily: 'Montserrat',
     fontWeight: 700,
     WebkitTextStroke: '1px #FFF',
-    WebkitTextFillColor: 'currentColor'
+    WebkitTextFillColor: 'currentColor',
   },
   {
     fontFamily: 'Bangers',
-    color: 'white'
+    color: 'white',
   },
   {
     fontFamily: 'Monoton',
-    color: 'white'
+    color: 'white',
   },
   {
     fontFamily: 'Playfair Display',
     fontWeight: 700,
-    color: 'white'
-  }
+    color: 'white',
+  },
 ]
 
 const Logo = () => (
@@ -30,7 +30,9 @@ const Logo = () => (
     <Link
       to={routes.HOME}
       className={classNames.link}
-      style={typefacesStyles[Math.floor(Math.random() * typefacesStyles.length)]}
+      style={
+        typefacesStyles[Math.floor(Math.random() * typefacesStyles.length)]
+      }
     >
       TIL
     </Link>

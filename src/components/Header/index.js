@@ -12,16 +12,41 @@ const Header = () => (
 
     <div className={classNames.navigation}>
       <div className={classNames.navigationItem}>
-        <NavLink exact to={routes.HOME} className={classNames.link} activeClassName={classNames.linkActive}>Next Event</NavLink>
+        <NavLink
+          exact
+          to={routes.HOME}
+          className={classNames.link}
+          activeClassName={classNames.linkActive}
+        >
+          Next Event
+        </NavLink>
       </div>
       <div className={classNames.navigationItem}>
-        <NavLink to={routes.PAST_EVENTS} className={classNames.link} activeClassName={classNames.linkActive}>Past Events</NavLink>
+        <NavLink
+          to={routes.PAST_EVENTS}
+          className={classNames.link}
+          activeClassName={classNames.linkActive}
+        >
+          Past Events
+        </NavLink>
       </div>
       <div className={classNames.navigationItem}>
-        <NavLink to={routes.JOIN} className={classNames.link} activeClassName={classNames.linkActive}>Join us</NavLink>
+        <NavLink
+          to={routes.JOIN}
+          className={classNames.link}
+          activeClassName={classNames.linkActive}
+        >
+          Join us
+        </NavLink>
       </div>
       <div className={classNames.navigationItem}>
-        <NavLink to={routes.ABOUT} className={classNames.link} activeClassName={classNames.linkActive}>About TIL</NavLink>
+        <NavLink
+          to={routes.ABOUT}
+          className={classNames.link}
+          activeClassName={classNames.linkActive}
+        >
+          About TIL
+        </NavLink>
       </div>
     </div>
   </div>

@@ -9,7 +9,9 @@
     "prebuild": "yarn run clean && cp CNAME 404.html dist/",
     "build": "cross-env NODE_ENV=production parcel build index.html --public-url ./",
     "predeploy": "yarn build",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d dist",
+    "lint": "eslint src",
+    "prettify": "prettier 'src/**/*.js' --write"
   },
   "repository": "https://github.com/samyakbhuta/til.camp.git",
   "contributors": [
@@ -20,11 +22,17 @@
   "license": "MIT",
   "private": true,
   "devDependencies": {
+    "babel-eslint": "^8.2.3",
     "babel-preset-env": "^1.6.1",
     "babel-preset-react": "^6.24.1",
     "cross-env": "^5.1.3",
+    "eslint": "^4.19.1",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-plugin-prettier": "^2.6.0",
+    "eslint-plugin-react": "^7.8.2",
     "gh-pages": "^1.1.0",
     "parcel-bundler": "^1.6.2",
+    "prettier": "^1.12.1",
     "rimraf": "^2.6.2"
   },
   "dependencies": {
@@ -32,6 +40,7 @@
     "firebase": "^4.10.1",
     "node-sass": "^4.7.2",
     "postcss-modules": "^1.1.0",
+    "prop-types": "^15.6.1",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-router-dom": "^4.2.2"
