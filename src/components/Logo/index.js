@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 
 import { brandColor } from '../../constants/colors'
-import * as routes from '../../constants/routes'
+import { HOME } from '../../config/routes'
 
 const StyledLink = styled(Link)`
   display: inline-block;
@@ -40,7 +40,7 @@ const typefacesStyles = [
 const Logo = () => (
   <div>
     <StyledLink
-      to={routes.HOME}
+      to={HOME.path}
       style={
         typefacesStyles[Math.floor(Math.random() * typefacesStyles.length)]
       }

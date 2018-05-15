@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom'
 import styled from 'styled-components'
 
 import { brandColor } from '../../constants/colors'
-import * as routes from '../../constants/routes'
+import { HOME, PAST_EVENTS, JOIN, ABOUT } from '../../config/routes'
 import Logo from '../Logo'
 
 const LogoContainer = styled.div`
@@ -61,18 +61,18 @@ const Header = () => (
 
     <Navigation>
       <NavigationItem>
-        <StyledNavLink exact to={routes.HOME}>
+        <StyledNavLink exact to={HOME.path}>
           Next Event
         </StyledNavLink>
       </NavigationItem>
       <NavigationItem>
-        <StyledNavLink to={routes.PAST_EVENTS}>Past Events</StyledNavLink>
+        <StyledNavLink to={PAST_EVENTS.path}>Past Events</StyledNavLink>
       </NavigationItem>
       <NavigationItem>
-        <StyledNavLink to={routes.JOIN}>Join us</StyledNavLink>
+        <StyledNavLink to={JOIN.path}>Join us</StyledNavLink>
       </NavigationItem>
       <NavigationItem>
-        <StyledNavLink to={routes.ABOUT}>About TIL</StyledNavLink>
+        <StyledNavLink to={ABOUT.path}>About TIL</StyledNavLink>
       </NavigationItem>
     </Navigation>
   </div>

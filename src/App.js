@@ -1,15 +1,10 @@
 import React from 'react'
-import { BrowserRouter, Route } from 'react-router-dom'
+import { Switch, Route } from 'react-router-dom'
 import { injectGlobal } from 'styled-components'
 
 import { linkColor } from './constants/colors'
-import * as routes from './constants/routes'
+import routes from './config/routes'
 import AppLayout from './components/AppLayout'
-import Home from './components/Home'
-import PastEvents from './components/PastEvents'
-import Join from './components/Join'
-import Suggest from './components/Suggest'
-import About from './components/About'
 
 injectGlobal`
   body {
@@ -25,14 +20,10 @@ injectGlobal`
 `
 
 const BasicExample = () => (
-  <BrowserRouter>
-    <AppLayout>
-      <Route exact path={routes.HOME} component={Home} />
-      <Route path={routes.PAST_EVENTS} component={PastEvents} />
-      <Route path={routes.JOIN} component={Join} />
-      <Route path={routes.SUGGEST} component={Suggest} />
-      <Route path={routes.ABOUT} component={About} />
-    </AppLayout>
-  </BrowserRouter>
+  <AppLayout>
+    <Switch>
+      {routes.map((route, index) => <Route key={index} {...route} />)}
+    </Switch>
+  </AppLayout>
 )
 export default BasicExample

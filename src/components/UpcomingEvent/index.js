@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
-import * as routes from '../../constants/routes'
+import { PAST_EVENTS } from '../../config/routes'
 
 const NextEvent = styled.div`
   text-align: center;
@@ -43,7 +43,7 @@ const UpcomingEvent = () => (
       13th May 2018 - 11 AM to 1 PM
     </a>
     <br />
-    <PastTalksLink to={routes.PAST_EVENTS}>Past Events ↝</PastTalksLink>
+    <PastTalksLink to={PAST_EVENTS.path}>Past Events ↝</PastTalksLink>
   </NextEvent>
 )
 
