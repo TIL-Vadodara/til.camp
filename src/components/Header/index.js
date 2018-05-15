@@ -1,54 +1,80 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
+import styled from 'styled-components'
+
+import { brandColor } from '../../constants/colors'
 import * as routes from '../../constants/routes'
 import Logo from '../Logo'
-import classNames from './index.scss'
+
+const LogoContainer = styled.div`
+  margin-bottom: 20px;
+  text-align: center;
+`
+
+const Navigation = styled.div`
+  display: flex;
+  justify-content: center;
+`
+
+const NavigationItem = styled.div`
+  flex-basis: content;
+  text-transform: uppercase;
+  font-size: 12px;
+`
+
+const activeClassName = 'active'
+const StyledNavLink = styled(NavLink).attrs({
+  activeClassName,
+})`
+  display: block;
+  height: 44px;
+  line-height: 44px;
+  padding: 0 12px;
+
+  &.${activeClassName} {
+    position: relative;
+    color: ${brandColor};
+
+    &::after {
+      content: '';
+      position: absolute;
+      left: 50%;
+      bottom: 5px;
+      height: 4px;
+      width: 4px;
+      transform: translateX(-2px);
+      border-radius: 100%;
+      background-color: ${brandColor};
+    }
+  }
+`
+
+StyledNavLink.defaultProps = {
+  activeClassName,
+}
 
 const Header = () => (
-  <div className={classNames.header}>
-    <div className={classNames.logoSection}>
+  <div>
+    <LogoContainer>
       <Logo />
-    </div>
+    </LogoContainer>
 
-    <div className={classNames.navigation}>
-      <div className={classNames.navigationItem}>
-        <NavLink
-          exact
-          to={routes.HOME}
-          className={classNames.link}
-          activeClassName={classNames.linkActive}
-        >
+    <Navigation>
+      <NavigationItem>
+        <StyledNavLink exact to={routes.HOME}>
           Next Event
-        </NavLink>
-      </div>
-      <div className={classNames.navigationItem}>
-        <NavLink
-          to={routes.PAST_EVENTS}
-          className={classNames.link}
-          activeClassName={classNames.linkActive}
-        >
-          Past Events
-        </NavLink>
-      </div>
-      <div className={classNames.navigationItem}>
-        <NavLink
-          to={routes.JOIN}
-          className={classNames.link}
-          activeClassName={classNames.linkActive}
-        >
-          Join us
-        </NavLink>
-      </div>
-      <div className={classNames.navigationItem}>
-        <NavLink
-          to={routes.ABOUT}
-          className={classNames.link}
-          activeClassName={classNames.linkActive}
-        >
-          About TIL
-        </NavLink>
-      </div>
-    </div>
+        </StyledNavLink>
+      </NavigationItem>
+      <NavigationItem>
+        <StyledNavLink to={routes.PAST_EVENTS}>Past Events</StyledNavLink>
+      </NavigationItem>
+      <NavigationItem>
+        <StyledNavLink to={routes.JOIN}>Join us</StyledNavLink>
+      </NavigationItem>
+      <NavigationItem>
+        <StyledNavLink to={routes.ABOUT}>About TIL</StyledNavLink>
+      </NavigationItem>
+    </Navigation>
   </div>
 )
 

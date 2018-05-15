@@ -1,8 +1,9 @@
-import React from 'react'
-import classNames from './index.scss'
+import styled from 'styled-components'
 
-const Footer = () => (
-  <div className={classNames.main}>© TIL - Today I Learned</div>
-)
+const Footer = styled.footer`
+  text-align: center;
+  font-size: 12px;
+  color: #888;
+`
 
 export default Footer

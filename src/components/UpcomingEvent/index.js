@@ -1,10 +1,27 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import styled from 'styled-components'
 import * as routes from '../../constants/routes'
-import classNames from './index.scss'
+
+const NextEvent = styled.div`
+  text-align: center;
+
+  a {
+    text-decoration: underline;
+  }
+`
+
+const PastTalksLink = styled(Link)`
+  display: inline-block;
+  margin-top: 20px;
+  text-decoration: none !important;
+  padding: 7px 21px;
+  border: 1px solid black;
+  border-radius: 4px;
+`
 
 const UpcomingEvent = () => (
-  <div className={classNames.nextEvent}>
+  <NextEvent>
     <h2>Next Event</h2>
     <b>Crafting Films With Love</b>
     <div>By - Nidhi Kamath (Documentary Filmmaker) </div>
@@ -26,10 +43,8 @@ const UpcomingEvent = () => (
       13th May 2018 - 11 AM to 1 PM
     </a>
     <br />
-    <Link className={classNames.pastTalksLink} to={routes.PAST_EVENTS}>
-      Past Events ↝
-    </Link>
-  </div>
+    <PastTalksLink to={routes.PAST_EVENTS}>Past Events ↝</PastTalksLink>
+  </NextEvent>
 )
 
 export default UpcomingEvent

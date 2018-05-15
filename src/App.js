@@ -1,5 +1,8 @@
 import React from 'react'
 import { BrowserRouter, Route } from 'react-router-dom'
+import { injectGlobal } from 'styled-components'
+
+import { linkColor } from './constants/colors'
 import * as routes from './constants/routes'
 import AppLayout from './components/AppLayout'
 import Home from './components/Home'
@@ -7,7 +10,19 @@ import PastEvents from './components/PastEvents'
 import Join from './components/Join'
 import Suggest from './components/Suggest'
 import About from './components/About'
-import classNames from './App.scss' // eslint-disable-line no-unused-vars
+
+injectGlobal`
+  body {
+    font-family: Montserrat;
+    font-size: 14px;
+    font-weight: 400;
+  }
+
+  a {
+    text-decoration: none;
+    color: ${linkColor};
+  }
+`
 
 const BasicExample = () => (
   <BrowserRouter>

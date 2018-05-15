@@ -1,20 +1,34 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import styled from 'styled-components'
 import Header from '../Header'
 import Footer from '../Footer'
-import classNames from './index.scss'
+
+const HeaderContainer = styled.div`
+  margin: 100px 0;
+`
+
+const MainContent = styled.div`
+  margin: 0 auto;
+  max-width: 900px;
+  padding: 0 15px;
+`
+
+const FooterContainer = styled.div`
+  margin: 100px 0;
+`
 
 const AppLayout = ({ children }) => (
   <div>
-    <div className={classNames.header}>
+    <HeaderContainer>
       <Header />
-    </div>
+    </HeaderContainer>
 
-    <div className={classNames.mainContent}>{children}</div>
+    <MainContent>{children}</MainContent>
 
-    <div className={classNames.footer}>
-      <Footer />
-    </div>
+    <FooterContainer>
+      <Footer>© TIL - Today I Learned</Footer>
+    </FooterContainer>
   </div>
 )
 
