@@ -1,7 +1,19 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import * as routes from '../../constants/routes'
-import classNames from './index.scss'
+import styled from 'styled-components'
+
+import { brandColor } from '../../constants/colors'
+import { HOME } from '../../config/routes'
+
+const StyledLink = styled(Link)`
+  display: inline-block;
+  padding: 5px 18px;
+  border-radius: 4px;
+  font-size: 30px;
+  letter-spacing: 4px;
+  color: transparent;
+  background-color: ${brandColor};
+`
 
 const typefacesStyles = [
   {
@@ -27,15 +39,14 @@ const typefacesStyles = [
 
 const Logo = () => (
   <div>
-    <Link
-      to={routes.HOME}
-      className={classNames.link}
+    <StyledLink
+      to={HOME.path}
       style={
         typefacesStyles[Math.floor(Math.random() * typefacesStyles.length)]
       }
     >
       TIL
-    </Link>
+    </StyledLink>
   </div>
 )
 
