@@ -1,11 +1,26 @@
-# TIL - Today I Learned
+# gatsby-starter-default
+The default Gatsby starter.
 
-## How to run this project
+For an overview of the project structure please refer to the [Gatsby documentation - Building with Components](https://www.gatsbyjs.org/docs/building-with-components/).
 
-1. Clone this repo locally
-2. `yarn install` to install dependencies
-3. `yarn run start` to start local development server
+## Install
 
-## How to deploy site
+Make sure that you have the Gatsby CLI program installed:
+```sh
+npm install --global gatsby-cli
+```
 
-Just run `yarn run deploy`.
+And run from your CLI:
+```sh
+gatsby new gatsby-example-site
+```
+
+Then you can run it by:
+```sh
+cd gatsby-example-site
+gatsby develop
+```
+
+## Deploy
+
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-default)
