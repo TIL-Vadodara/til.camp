@@ -4,4 +4,12 @@
  * See: https://www.gatsbyjs.org/docs/node-apis/
  */
 
- // You can delete this file if you're not using it
+exports.modifyWebpackConfig = function({ config }) {
+  config.merge({
+    node: {
+      dns: 'empty',
+      net: 'empty',
+    },
+  })
+  return config
+}

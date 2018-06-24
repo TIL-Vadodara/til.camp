@@ -4,17 +4,18 @@ import moment from 'moment'
 import PageTitle from '../components/PageTitle'
 import EventList from '../components/EventList'
 
-const IndexPage = ({ data }) => {
-  const upcomingEvents = data.allEvent.edges
-    .filter(e => moment(e.node.date).isSameOrAfter(moment()))
+const EventsPage = ({ data }) => {
+  const pastEvents = data.allEvent.edges
+    .filter(e => moment(e.node.date).isBefore(moment()))
     .map(x => x.node)
+    .reverse()
 
   return (
     <div>
-      {upcomingEvents.length > 0 ? (
+      {pastEvents.length > 0 ? (
         <div>
-          <PageTitle>Upcoming Events</PageTitle>
-          <EventList list={upcomingEvents} />
+          <PageTitle>Past Events</PageTitle>
+          <EventList list={pastEvents} />
         </div>
       ) : (
         'No upcoming event'
@@ -23,14 +24,14 @@ const IndexPage = ({ data }) => {
   )
 }
 
-IndexPage.propTypes = {
+EventsPage.propTypes = {
   data: PropTypes.any,
 }
 
-export default IndexPage
+export default EventsPage
 
 export const eventQuery = graphql`
-  query Events {
+  query PastEvents {
     allEvent(sort: { fields: [date] }) {
       edges {
         node {

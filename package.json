@@ -1,24 +1,33 @@
 {
-  "name": "gatsby-starter-default",
-  "description": "Gatsby default starter",
+  "name": "til.camp",
+  "description": "Website for TIL",
   "version": "1.0.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "private": true,
+  "homepage": "http://til.camp",
+  "repository": "https://github.com/TIL-Vadodara/til.camp",
+  "contributors": [
+    "Lakhan Samani <lakhan.m.samani@gmail.com>",
+    "Nayaabkhan Khan <khannayaab@gmail.com>"
+  ],
   "dependencies": {
     "gatsby": "^1.9.247",
     "gatsby-link": "^1.6.40",
     "gatsby-plugin-react-helmet": "^2.0.10",
-    "react-helmet": "^5.2.0"
+    "gatsby-source-gsheets": "^1.0.0",
+    "generate-google-calendar-url": "^0.0.2",
+    "moment": "^2.22.2",
+    "polished": "^1.9.2",
+    "react-helmet": "^5.2.0",
+    "react-media": "^1.8.0",
+    "styled-components": "^3.3.2"
   },
-  "keywords": [
-    "gatsby"
-  ],
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
     "lint": "eslint src",
     "format": "prettier --write 'src/**/*.js'",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "deploy": "gatsby build && gh-pages -d public"
   },
   "devDependencies": {
     "babel-eslint": "^8.2.3",
@@ -26,10 +35,7 @@
     "eslint-config-prettier": "^2.9.0",
     "eslint-plugin-prettier": "^2.6.0",
     "eslint-plugin-react": "^7.9.1",
+    "gh-pages": "^1.2.0",
     "prettier": "^1.13.5"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
   }
 }

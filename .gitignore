@@ -5,7 +5,10 @@
 
 # production
 .cache
-/build
+/public
+
+# secrets
+secret.json
 
 # misc
 .DS_Store
