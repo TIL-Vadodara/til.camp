@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import styled, { css } from 'styled-components'
+import { lighten } from 'polished'
 import moment from 'moment'
 import generateUrl from 'generate-google-calendar-url'
 import DateBox from './DateBox'
@@ -60,7 +61,7 @@ const Time = styled.div`
 const Place = styled.a`
   margin-top: ${spacings.xSmall};
   margin-right: ${spacings.medium};
-  border-bottom: 1px dotted ${colors.borderColor};
+  border-bottom: 1px dashed ${lighten(0.25, colors.tertiaryTextColor)};
   color: currentColor;
 `
 
