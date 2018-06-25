@@ -11,6 +11,7 @@ import IconPresenter from '../../icons/Presenter'
 import * as colors from '../../config/theme/colors'
 import * as spacings from '../../config/theme/spacings'
 import * as typography from '../../config/theme/typography'
+import { media } from '../../config/theme/breakpoints'
 import responsiveSize from '../../utils/responsiveSize'
 
 const Item = styled.li`
@@ -23,9 +24,11 @@ const Item = styled.li`
     border-top: 0;
   }
 
-  &:last-child {
-    border-bottom: 0;
-  }
+  ${media.medium`
+    &:last-child {
+      border-bottom: 0;
+    }
+  `};
 `
 
 const ContentWrapper = styled.div`
@@ -67,11 +70,11 @@ const Presenter = styled.div`
 
 const Title = styled.h3`
   margin: 0;
-  font-size: ${responsiveSize(17, 20)};
+  font-size: ${responsiveSize(18, 20)};
 `
 
 const Description = styled.p`
-  color: ${colors.tertiaryTextColor};
+  color: ${colors.secondaryTextColor};
 `
 
 const StyledButtonRow = styled(ButtonRow)`
@@ -135,10 +138,12 @@ class EventListItem extends React.Component {
                 <IconLocation style={{ marginRight: '6px' }} />
                 {event.venue.name}
               </Place>
-              <Presenter>
-                <IconPresenter style={{ marginRight: '6px' }} />
-                {event.presenter}
-              </Presenter>
+              {event.presenter && (
+                <Presenter>
+                  <IconPresenter style={{ marginRight: '6px' }} />
+                  {event.presenter}
+                </Presenter>
+              )}
             </Details>
             {this.state.isExpanded &&
               event.description && (
