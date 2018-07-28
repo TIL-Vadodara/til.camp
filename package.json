@@ -1,45 +1,43 @@
 {
   "name": "til.camp",
+  "description": "Website for TIL",
   "version": "1.0.0",
+  "private": true,
   "homepage": "http://til.camp",
-  "main": "index.js",
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject",
-    "predeploy": "yarn build",
-    "deploy": "gh-pages -d build",
-    "lint": "eslint src",
-    "prettify": "prettier 'src/**/*.js' --write"
-  },
-  "repository": "https://github.com/samyakbhuta/til.camp.git",
+  "repository": "https://github.com/TIL-Vadodara/til.camp",
   "contributors": [
     "Lakhan Samani <lakhan.m.samani@gmail.com>",
-    "Nayaabkhan Khan <khannayaab@gmail.com>",
-    "Samyak Bhuta <samyak.bhuta@gmail.com>"
+    "Nayaabkhan Khan <khannayaab@gmail.com>"
   ],
+  "dependencies": {
+    "babel-plugin-styled-components": "^1.5.1",
+    "gatsby": "^1.9.247",
+    "gatsby-link": "^1.6.40",
+    "gatsby-plugin-react-helmet": "^2.0.10",
+    "gatsby-plugin-styled-components": "^2.0.11",
+    "gatsby-source-gsheets": "^1.0.0",
+    "generate-google-calendar-url": "^0.0.2",
+    "moment": "^2.22.2",
+    "polished": "^1.9.2",
+    "react-helmet": "^5.2.0",
+    "react-media": "^1.8.0",
+    "styled-components": "^3.3.3"
+  },
   "license": "MIT",
-  "private": true,
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "lint": "eslint src",
+    "format": "prettier --write 'src/**/*.js'",
+    "deploy": "gatsby build && gh-pages -d public"
+  },
   "devDependencies": {
     "babel-eslint": "^8.2.3",
     "eslint": "^4.19.1",
     "eslint-config-prettier": "^2.9.0",
     "eslint-plugin-prettier": "^2.6.0",
-    "eslint-plugin-react": "^7.8.2",
-    "gh-pages": "^1.1.0",
-    "prettier": "^1.12.1"
-  },
-  "dependencies": {
-    "autoprefixer": "^8.1.0",
-    "firebase": "^4.10.1",
-    "polished": "^1.9.2",
-    "prop-types": "^15.6.1",
-    "react": "^16.3.2",
-    "react-dom": "^16.3.2",
-    "react-loadable": "^5.4.0",
-    "react-router-dom": "^4.2.2",
-    "react-scripts": "1.1.4",
-    "styled-components": "^3.2.6"
+    "eslint-plugin-react": "^7.9.1",
+    "gh-pages": "^1.2.0",
+    "prettier": "^1.13.5"
   }
 }

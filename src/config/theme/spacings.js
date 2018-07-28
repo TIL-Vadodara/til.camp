@@ -1,0 +1,7 @@
+export const xxSmall = '4px'
+export const xSmall = '6.5px'
+export const small = '10.5px'
+export const medium = '17px'
+export const large = '27.5px'
+export const xLarge = '44.5px'
+export const xxLarge = '72px'
