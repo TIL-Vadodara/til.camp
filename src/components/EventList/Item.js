@@ -18,17 +18,17 @@ import responsiveSize from '../../utils/responsiveSize'
 const Item = styled.li`
   position: relative;
   list-style-type: none;
-  color: ${colors.secondaryTextColor};
+  margin-bottom: ${spacings.medium};
+  border-top: 1px solid ${colors.borderColor};
   border-bottom: 1px solid ${colors.borderColor};
-
-  &:first-child {
-    border-top: 0;
-  }
+  color: ${colors.secondaryTextColor};
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
 
   ${media.medium`
-    &:last-child {
-      border-bottom: 0;
-    }
+    border-right: 1px solid ${colors.borderColor};
+    border-left: 1px solid ${colors.borderColor};
+    border-radius: 4px;
+    overflow: hidden;
   `};
 `
 
@@ -36,6 +36,19 @@ const ContentWrapper = styled.div`
   display: flex;
   align-items: flex-start;
   padding: ${spacings.large} ${spacings.large};
+`
+
+const BannerContainer = styled.div`
+  position: relative;
+  padding-bottom: 56%;
+  overflow: hidden;
+  border-bottom: 1px solid ${colors.borderColor};
+  background-color: ${colors.imagePlaceholderColor};
+`
+
+const Banner = styled.img`
+  position: absolute;
+  width: 100%;
 `
 
 const Contents = styled.div`
@@ -126,6 +139,9 @@ class EventListItem extends React.Component {
     const { event, ...rest } = this.props
     return (
       <Item {...rest}>
+        <BannerContainer>
+          <Banner src={event.bannerUrl} />
+        </BannerContainer>
         <ContentWrapper>
           <DateBox date={event.date} />
           <Contents>

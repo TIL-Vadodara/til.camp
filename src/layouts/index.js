@@ -79,6 +79,7 @@ Layout.propTypes = {
 
 export default Layout
 
+// eslint-disable-next-line no-undef
 export const query = graphql`
   query SiteTitleQuery {
     site {

@@ -6,3 +6,5 @@ export const tertiaryTextColor = 'hsl(0, 0%, 55%)'
 
 export const primaryColor = 'hsl(2, 75%, 52%)'
 export const borderColor = 'hsl(0, 0%, 93%)'
+
+export const imagePlaceholderColor = 'hsl(0, 0%, 96%)'
