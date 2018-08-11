@@ -30,6 +30,7 @@ EventsPage.propTypes = {
 
 export default EventsPage
 
+// eslint-disable-next-line no-undef
 export const eventQuery = graphql`
   query PastEvents {
     allEvent(sort: { fields: [date] }) {
@@ -41,6 +42,7 @@ export const eventQuery = graphql`
           date
           startTime
           endTime
+          bannerUrl
 
           venue {
             name
