@@ -6,7 +6,9 @@ import EventList from '../components/EventList'
 
 const IndexPage = ({ data }) => {
   const upcomingEvents = data.allEvent.edges
-    .filter(e => moment(e.node.date).isSameOrAfter(moment()))
+    .filter(e =>
+      moment(`${e.node.date} ${e.node.endTime}`).isSameOrAfter(moment())
+    )
     .map(x => x.node)
 
   return (

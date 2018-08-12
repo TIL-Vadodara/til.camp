@@ -6,7 +6,7 @@ import EventList from '../components/EventList'
 
 const EventsPage = ({ data }) => {
   const pastEvents = data.allEvent.edges
-    .filter(e => moment(e.node.date).isBefore(moment()))
+    .filter(e => moment(`${e.node.date} ${e.node.endTime}`).isBefore(moment()))
     .map(x => x.node)
     .reverse()
 
