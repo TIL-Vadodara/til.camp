@@ -18,7 +18,7 @@ import responsiveSize from '../../utils/responsiveSize'
 const Item = styled.li`
   position: relative;
   list-style-type: none;
-  margin-bottom: ${spacings.medium};
+  margin-bottom: ${spacings.large};
   border-top: 1px solid ${colors.borderColor};
   border-bottom: 1px solid ${colors.borderColor};
   color: ${colors.secondaryTextColor};
