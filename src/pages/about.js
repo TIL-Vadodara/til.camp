@@ -1,5 +1,4 @@
 import React from 'react'
-import PageTitle from '../components/PageTitle'
 import MeetupLogo from '../images/MeetupLogo'
 import InstagramLogo from '../images/InstagramLogo'
 import FacebookLogo from '../images/FacebookLogo'
@@ -25,7 +24,6 @@ const SocialLink = styled.a`
 
 const SecondPage = () => (
   <div>
-    <PageTitle>About Us</PageTitle>
     <p>
       For Geeks by Geeks. Talks, Discussions and Video streaming on topics that
       would interest the geek in you. TIL is geek meetup group in Vadodara.

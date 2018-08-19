@@ -54,11 +54,12 @@ const Layout = ({ children, data }) => (
       <title>{data.site.siteMetadata.title}</title>
     </Helmet>
 
-    <HeaderContainer>
-      <Header />
-    </HeaderContainer>
-
-    <ContentContainer>{children()}</ContentContainer>
+    <ContentContainer>
+      <HeaderContainer>
+        <Header />
+      </HeaderContainer>
+      {children()}
+    </ContentContainer>
 
     <Media query={small}>
       {matches =>

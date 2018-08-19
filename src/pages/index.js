@@ -1,7 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import moment from 'moment'
-import PageTitle from '../components/PageTitle'
 import EventList from '../components/EventList'
 
 const IndexPage = ({ data }) => {
@@ -15,7 +14,6 @@ const IndexPage = ({ data }) => {
     <div>
       {upcomingEvents.length > 0 ? (
         <div>
-          <PageTitle>Upcoming Events</PageTitle>
           <EventList list={upcomingEvents} />
         </div>
       ) : (

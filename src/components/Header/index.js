@@ -11,6 +11,9 @@ import * as spacings from '../../config/theme/spacings'
 const HeaderLayout = styled.div`
   display: flex;
   align-items: center;
+  justify-content: center;
+
+  ${media.medium`justify-content:space-between`};
 `
 
 const LogoLink = styled(Link)`

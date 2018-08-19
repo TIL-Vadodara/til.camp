@@ -20,6 +20,10 @@ const Item = styled.li`
   flex-grow: 1;
 
   ${media.medium`margin-right: ${spacings.medium}`};
+
+  &:last-child {
+    margin-right: 0;
+  }
 `
 
 const activeClassName = 'active'
