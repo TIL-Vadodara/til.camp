@@ -23,6 +23,10 @@ module.exports = {
             type: 'Venue',
             sheet: 'Venues',
           },
+          {
+            type: 'Member',
+            sheet: 'Members',
+          },
         ],
       },
     },

@@ -1,7 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import moment from 'moment'
-import PageTitle from '../components/PageTitle'
 import EventList from '../components/EventList'
 
 const EventsPage = ({ data }) => {
@@ -14,7 +13,6 @@ const EventsPage = ({ data }) => {
     <div>
       {pastEvents.length > 0 ? (
         <div>
-          <PageTitle>Past Events</PageTitle>
           <EventList list={pastEvents} />
         </div>
       ) : (
