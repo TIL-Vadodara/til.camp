@@ -181,7 +181,13 @@ class MembersPage extends React.Component {
 
   render() {
     const { searchQuery } = this.state
-    const memberList = this.props.data.allMember.edges
+    let memberList
+
+    try {
+      memberList = this.props.data.allMember.edges
+    } catch (e) {
+      memberList = []
+    }
 
     const filteredList = getFilteredList(searchQuery, memberList)
 
@@ -216,25 +222,25 @@ MembersPage.propTypes = {
 }
 
 // eslint-disable-next-line no-undef
-export const memberQuery = graphql`
-  query Members {
-    allMember {
-      edges {
-        node {
-          photo
-          name
-          subtitle
-          bio
-          email
-          location
-          instagramprofile
-          facebookprofile
-          twitterprofile
-          linkedinprofile
-        }
-      }
-    }
-  }
-`
+// export const memberQuery = graphql`
+//   query Members {
+//     allMember {
+//       edges {
+//         node {
+//           photo
+//           name
+//           subtitle
+//           bio
+//           email
+//           location
+//           instagramprofile
+//           facebookprofile
+//           twitterprofile
+//           linkedinprofile
+//         }
+//       }
+//     }
+//   }
+// `
 
 export default MembersPage
